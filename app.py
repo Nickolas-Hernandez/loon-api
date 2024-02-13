@@ -1,8 +1,12 @@
+# import psycopg2
 from flask import Flask
 
 app = Flask(__name__)
 
-print('hello world!! file running')
+# conn = psycopg2.connect("dbname=loon_db user=nickhernandez")
+# cur = conn.cursor()
+# cur.execute("SELECT * FROM loon_db")
+# records = cur.fetchall()
 
 @app.route('/')
 def helloWorld():
