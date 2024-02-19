@@ -22,13 +22,9 @@ cache = Cache(app)
 
 @app.route('/')
 def moonPhase():
-    # Date of a known new moon: January 6, 2000
     known_new_moon = datetime(2000, 1, 6)
-    # Current UTC time
     now = datetime.utcnow()
-    # Difference in days from the known new moon
     days_since_new_moon = (now - known_new_moon).days + (now - known_new_moon).seconds / 86400
-    # The moon's age in the current cycle
     moon_age = days_since_new_moon % 29.53
 
     if moon_age < 7.4:
